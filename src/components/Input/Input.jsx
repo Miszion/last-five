@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getMatchList } from '../../helpers/Riot'
+import { getMatchesJSON, getFiveMatches} from '../../helpers/Riot'
 
 import '../Input/Input.css'
 
@@ -7,8 +7,13 @@ const Input = (props) => {
 
     const [summonerName, setName] = useState(undefined)
 
-    const onClick = () => {
-        console.log(getMatchList(summonerName))
+    const onClick = async () => {
+        
+        const response = await getMatchesJSON(summonerName)
+
+        const getMatches = await getFiveMatches(response)
+
+        console.log(getMatches)
     }
 
 
