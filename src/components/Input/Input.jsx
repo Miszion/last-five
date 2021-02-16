@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { getMatchList } from '../../helpers/Riot'
+
 import '../Input/Input.css'
+
 const Input = (props) => {
+
+    const [summonerName, setName] = useState(undefined)
+
+    const onClick = () => {
+        console.log(getMatchList(summonerName))
+    }
+
 
     return (
         <div className='input-summoner'>
@@ -9,8 +19,10 @@ const Input = (props) => {
                     Summoner Name
                 </div>
                 <div className='input-block'>
-                    <input type="text"></input>
-                    <button className='search'>Search</button>
+                    <input type="text" onChange={(e) => {
+                        setName(e.target.value)
+                    }}></input>
+                    <button className='search' onClick={onClick}>Search</button>
                 </div>
             </div>
         </div>
