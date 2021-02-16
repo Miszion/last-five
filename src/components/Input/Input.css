@@ -1,0 +1,54 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .input-label {
+    text-align: left;
+    color: white;
+  }
+  
+  .input-block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  
+  .input-summoner input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    padding-left: 5px;
+    border: 1px solid #eeeeee;
+    border-top-left-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    border-bottom-left-radius: 5px;
+  }
+  
+  input:focus, textarea:focus, select:focus, button:focus{
+    outline: none;
+  }
+  
+  .input-summoner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  button {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .search {
+    height: 43px;
+    width: 60px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #C60C5F;
+  }
