@@ -39,12 +39,40 @@ class App extends React.Component {
 
   }
   
+  fetchSummonerIcon = async () => {
+    const getRes = await fetch('http://127.0.0.1:8000/summoner_icon', {
+      body: JSON.stringify({
+        'summonerName': 'Mish'
+      }),
+      method: 'POST'
+    })
+
+    const text = await getRes.json()
+
+    return text
+
+  }
+
+  fetchSummonerRank = async () => {
+    const getRes = await fetch('http://127.0.0.1:8000/rank', {
+      body: JSON.stringify({
+        'summonerName': 'Mish'
+      }),
+      method: 'POST'
+    })
+
+    const text = await getRes.json()
+
+    return text
+
+  }
   
+ 
 
 
   componentDidMount = async () => {
 
-    const fetch = await this.fetchWinRate()
+    const fetch = await this.fetchSummonerRank()
 
   }
 
