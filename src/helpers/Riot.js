@@ -36,11 +36,13 @@ export const getFiveMatches = async (matchJSON) => {
 
     var  i  = 0
     while (i < 5) {
-
         const match = await getMatch(matchList[i].gameId)
         listOfMatches.push(match)
         i = i + 1
     }
 
-    console.log(matchJSON)
+    for (var j in listOfMatches) {
+        console.log()
+    }
+
 }
