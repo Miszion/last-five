@@ -1,0 +1,21 @@
+.landing {
+    text-align: center;
+    background-color: #282c34;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .headline-input {
+    margin-top: -75px;
+  }
+  
+  .headline-title {
+    font-size: 64px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+  }
