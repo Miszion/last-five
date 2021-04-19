@@ -1,46 +1,70 @@
-export const fetchEncryptedAccountId = async (summonerName) => {
+export const fetchMostPlayed = async (summonerName) => {
+    const getRes = await fetch('http://127.0.0.1:8000/most_played', {
+      body: JSON.stringify({
+        'summonerName': summonerName
+      }),
+      method: 'POST'
+    })
+  
+    const text = await getRes.json()
+  
+    return text
+  }
 
-
-    const response = await fetch(`${process.env.REACT_APP_FETCH_SUMMONER_URL}/${summonerName}?api_key=${process.env.REACT_APP_RIOT_KEY}`, {
-        method: "GET"
+export const fetchWinRate = async (summonerName) => {
+    const getRes = await fetch('http://127.0.0.1:8000/winrate', {
+      body: JSON.stringify({
+        'summonerName': summonerName
+      }),
+      method: 'POST'
     })
 
-    return await response.json()
+    const text = await getRes.json()
+
+    return text
+
+  }
+  
+export const fetchSummonerIcon = async (summonerName) => {
+    const getRes = await fetch('http://127.0.0.1:8000/summoner_icon', {
+      body: JSON.stringify({
+        'summonerName': summonerName
+      }),
+      method: 'POST'
+    })
+
+    const text = await getRes.json()
+
+    return text
+
+  }
+
+export const fetchSummonerRank = async (summonerName) => {
+    const getRes = await fetch('http://127.0.0.1:8000/rank', {
+      body: JSON.stringify({
+        'summonerName': summonerName
+      }),
+      method: 'POST'
+    })
+
+    const text = await getRes.json()
+
+    return text
 
 }
 
-export const getMatchesJSON = async (summonerName) => {
-    const encryptedInfo = await fetchEncryptedAccountId(summonerName)
 
-    const accountId = encryptedInfo.accountId
-    const response = await fetch(`${process.env.REACT_APP_FETCH_MATCHLIST_URL}/${accountId}?api_key=${process.env.REACT_APP_RIOT_KEY}`, {
-        method: "GET"
-    })
+export const lookupSummoner = async (summonerName) => {
 
-    return await response.json()
+    const responses = await Promise.all([await fetchSummonerIcon(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
 
-}
-
-export const getMatch = async (gameId) => {
-
-    const response = await fetch(`${process.env.REACT_APP_FETCH_MATCH_URL}/${gameId}/?api_key=${process.env.REACT_APP_RIOT_KEY}`, {
-        method: "GET"
-    })
-
-    return await response.json()
-}
-
-export const getFiveMatches = async (matchJSON) => {
-    const matchList = await matchJSON.matches;
-    const listOfMatches = []
-
-    var  i  = 0
-    while (i < 5) {
-
-        const match = await getMatch(matchList[i].gameId)
-        listOfMatches.push(match)
-        i = i + 1
+    const summoner = {
+        summonerIcon: await responses[0],
+        summonerRank: await responses[1],
+        winRate: await responses[2],
+        mostPlayed: await responses[3]
     }
 
-    console.log(matchJSON)
+    return summoner
+
 }
