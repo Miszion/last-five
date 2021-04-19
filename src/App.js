@@ -2,87 +2,58 @@
 import React from 'react'
 
 import './App.css';
-import Input from './components/Input/Input'
-import { fetchEncryptedAccountId, getMatchesJSON } from '../src/helpers/Riot'
+import { lookupSummoner } from '../src/helpers/riot'
+import Profile from '../src/screens/profile/profile'
+import Landing from '../src/screens/landing/landing'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
+
+    this.state = {
+      isLoading: false
+    }
   }
 
-  
-  fetchMostPlayed = async () => {
-    const getRes = await fetch('http://127.0.0.1:8000/most_played', {
-      body: JSON.stringify({
-        'summonerName': 'TL Yeon'
-      }),
-      method: 'POST'
-    })
-  
-    const text = await getRes.json()
-  
-    return text
-  }
 
-  fetchWinRate = async () => {
-    const getRes = await fetch('http://127.0.0.1:8000/winrate', {
-      body: JSON.stringify({
-        'summonerName': 'Mish'
-      }),
-      method: 'POST'
+  lookupSummoner = async (summonerName) => {
+
+    this.setState({
+      isLoading: true
     })
 
-    const text = await getRes.json()
+    const summoner = await lookupSummoner(summonerName)
 
-    return text
+    this.setState({
+        lookupSummoner: summoner,
+        isLoading: false 
+    })
+
+    return summoner
 
   }
   
-  fetchSummonerIcon = async () => {
-    const getRes = await fetch('http://127.0.0.1:8000/summoner_icon', {
-      body: JSON.stringify({
-        'summonerName': 'Mish'
-      }),
-      method: 'POST'
-    })
-
-    const text = await getRes.json()
-
-    return text
-
-  }
-
-  fetchSummonerRank = async () => {
-    const getRes = await fetch('http://127.0.0.1:8000/rank', {
-      body: JSON.stringify({
-        'summonerName': 'Mish'
-      }),
-      method: 'POST'
-    })
-
-    const text = await getRes.json()
-
-    return text
-
-  }
-  
- 
-
-
-  componentDidMount = async () => {
-
-    const fetch = await this.fetchSummonerRank()
-
-  }
 
   render = () => {
     return (
       <div className="App">
-        <div className='headline-title'>
-          Last Five
-        </div>
-        <Input></Input>
+        <Router>
+          <Switch>
+
+            <Route path='/profile' render={() => (
+              <Profile {...this.state}></Profile>
+            )}/>
+
+            <Route path='/' render={() => (
+              <Landing onClick={async (summonerName) => {
+                await this.lookupSummoner(summonerName)
+              }}></Landing>
+            )}/>
+
+          </Switch>
+        </Router>
       </div>
     );
   }
