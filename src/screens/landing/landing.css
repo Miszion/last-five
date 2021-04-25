@@ -1,18 +1,44 @@
 .landing {
     text-align: center;
-    background-color: #282c34;
+    background-color: #fafafa;
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 105px;
+    margin-top: 175px;
   }
   
-
+  .finished-loading {
+    animation: slideOut 1.5s ease-in forwards !important;
+  }
   
   .headline-title {
     font-size: 64px;
     margin-bottom: 50px;
-    color: white;
+    color: #434343;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+  }
+
+  .headline-input {
+    animation: slideIn .8s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(25px)
+    }
+    to {
+      transform: translateX(0px)
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
   }

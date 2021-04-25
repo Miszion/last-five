@@ -1,22 +1,17 @@
 import './landing.css'
 import Input from '../../components/Input/Input'
-import { useHistory } from 'react-router'
 import { useState } from 'react';
 import Loading from '../../components/loading/loading';
 const Landing = (props) => {
 
-    let history = useHistory();
     
     const [isLoading, setLoading] = useState(false)
-
+    const [finishedLoading, setFinished] = useState(false)
     const { onClick } = props
 
     return (
         <div className='landing'>
-            <div className='loading-section'>
-                {isLoading && <Loading></Loading>}
-            </div>
-            <div className='headline-input'>
+            <div className={`headline-input ${finishedLoading && 'finished-loading'}`}>
                 <div className='headline-title'>
                 Last Five
                 </div>
@@ -24,9 +19,12 @@ const Landing = (props) => {
                     setLoading(true)
                     const response = await onClick(summonerName)
                     setLoading(false)
-                    history.push('/profile')
+                    setFinished(true)
                 }}></Input>
             </div>
+            {isLoading && <div className='loading-section'>
+                <Loading></Loading>
+            </div>}
       </div>
     )
 
