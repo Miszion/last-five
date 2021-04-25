@@ -10,7 +10,8 @@
   .finished-loading {
     animation: slideOut 1.5s ease-in forwards !important;
   }
-  
+
+
   .headline-title {
     font-size: 64px;
     margin-bottom: 50px;

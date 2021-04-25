@@ -1,14 +1,16 @@
 import './landing.css'
-import Input from '../../components/Input/Input'
+import Input from '../../components/Input/input'
 import { useState } from 'react';
-import Loading from '../../components/loading/loading';
+import Loading from '../../components/Loading/loading';
+import Dashboard from '../../components/Dashboard/dashboard';
+
 const Landing = (props) => {
 
     
     const [isLoading, setLoading] = useState(false)
     const [isError, setError] = useState("")
     const [finishedLoading, setFinished] = useState(false)
-    const { onClick } = props
+    const { onClick, lookupSummoner } = props
 
     return (
         <div className='landing'>
@@ -32,6 +34,9 @@ const Landing = (props) => {
             {isLoading && <div className='loading-section'>
                 <Loading></Loading>
             </div>}
+            {finishedLoading &&
+                <Dashboard {...props}></Dashboard>
+            }
       </div>
     )
 

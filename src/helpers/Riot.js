@@ -25,8 +25,8 @@ export const fetchWinRate = async (summonerName) => {
 
   }
   
-export const fetchSummonerIcon = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/summoner_icon', {
+export const fetchSummonerInfo = async (summonerName) => {
+    const getRes = await fetch('http://127.0.0.1:8000/summoner_info', {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
@@ -59,11 +59,12 @@ export const lookupSummoner = async (summonerName) => {
 
   try {
 
-    const responses = await Promise.all([await fetchSummonerIcon(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
+    const responses = await Promise.all([await fetchSummonerInfo(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
 
 
     const summoner = {
-        summonerIcon: await responses[0],
+        summonerName: summonerName,
+        summonerInfo: await responses[0],
         summonerRank: await responses[1],
         winRate: await responses[2],
         mostPlayed: await responses[3]
