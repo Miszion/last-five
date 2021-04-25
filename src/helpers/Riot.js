@@ -56,7 +56,11 @@ export const fetchSummonerRank = async (summonerName) => {
 
 export const lookupSummoner = async (summonerName) => {
 
+
+  try {
+
     const responses = await Promise.all([await fetchSummonerIcon(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
+
 
     const summoner = {
         summonerIcon: await responses[0],
@@ -66,5 +70,13 @@ export const lookupSummoner = async (summonerName) => {
     }
 
     return summoner
+  }
+
+  catch(err) 
+  {
+    return {
+      error: "Could not find summoner"
+    }
+  }
 
 }

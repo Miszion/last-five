@@ -4,7 +4,7 @@ import '../Input/Input.css'
 
 const Input = (props) => {
 
-    const { onClick } = props
+    const { isError, onClick } = props
     const [summonerName, setName] = useState(undefined)
 
 
@@ -20,6 +20,7 @@ const Input = (props) => {
                     }}></input>
                     <button className='search' onClick={async () => {await onClick(summonerName)}}>Search</button>
                 </div>
+                <div className='error'>{isError}</div>
             </div>
         </div>
     )

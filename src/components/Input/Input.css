@@ -10,6 +10,14 @@
     padding-left: 5px;
     font-weight: bold;
   }
+
+  .error {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: #ee609c;
+  }
   
   .input-block {
     display: flex;

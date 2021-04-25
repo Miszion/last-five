@@ -6,6 +6,7 @@ const Landing = (props) => {
 
     
     const [isLoading, setLoading] = useState(false)
+    const [isError, setError] = useState("")
     const [finishedLoading, setFinished] = useState(false)
     const { onClick } = props
 
@@ -15,11 +16,17 @@ const Landing = (props) => {
                 <div className='headline-title'>
                 Last Five
                 </div>
-                <Input onClick={ async (summonerName) => {
+                <Input isError={(!isLoading && isError != "") && isError} onClick={ async (summonerName) => {
                     setLoading(true)
                     const response = await onClick(summonerName)
                     setLoading(false)
-                    setFinished(true)
+                    if (response.error) {
+                        setError(response.error)
+                    }
+                    else {
+                        setError("")
+                        setFinished(true)
+                    }
                 }}></Input>
             </div>
             {isLoading && <div className='loading-section'>

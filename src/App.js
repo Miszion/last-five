@@ -48,7 +48,7 @@ class App extends React.Component {
 
             <Route path='/' render={() => (
               <Landing onClick={async (summonerName) => {
-                await this.lookupSummoner(summonerName)
+                return await this.lookupSummoner(summonerName)
               }}></Landing>
             )}/>
 
