@@ -2,7 +2,7 @@
     width: 300px;
     animation: slideInWinrate 1.5s ease-out forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 .winrate-headline {
@@ -29,6 +29,8 @@
     background: #eeeeee;
     border-radius: 50%;
     overflow: hidden;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 
@@ -45,6 +47,8 @@
 }
 
 .winrate-percentage {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     transform-origin: 0 0;
     position: absolute;
     top: 50%;

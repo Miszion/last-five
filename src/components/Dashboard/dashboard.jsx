@@ -3,6 +3,7 @@ import Ranked from '../Ranked/ranked'
 import Profile from '../Profile/profile'
 import MostPlayed from '../MostPlayed/mostPlayed'
 import Winrate from '../Winrate/winrate'
+import AverageDamage from '../AverageDamage/averageDamage'
 const Dashboard = (props) => {
 
     const { lookupSummoner } = props
@@ -16,6 +17,7 @@ const Dashboard = (props) => {
                 <Ranked rank={lookupSummoner.summonerRank.rank} LP={lookupSummoner.summonerRank.LP}></Ranked>
                 <MostPlayed {...lookupSummoner}></MostPlayed>
                 <Winrate {...lookupSummoner}></Winrate>
+                <AverageDamage {...lookupSummoner}></AverageDamage>
             </div>
         </div>
     )

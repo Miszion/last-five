@@ -12,7 +12,7 @@ export const fetchMostPlayed = async (summonerName) => {
   }
 
 export const fetchWinRate = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/winrate', {
+    const getRes = await fetch('http://127.0.0.1:8000/match_info', {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
@@ -66,7 +66,9 @@ export const lookupSummoner = async (summonerName) => {
         summonerName: summonerName,
         summonerInfo: await responses[0],
         summonerRank: await responses[1],
-        winRate: await responses[2],
+        winRate: await responses[2].winrate,
+        averageDamage: await responses[2].average_damage,
+        averageDpm: await responses[2].average_dpm,
         mostPlayed: await responses[3]
     }
 
