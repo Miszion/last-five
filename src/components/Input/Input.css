@@ -6,9 +6,17 @@
   
   .input-label {
     text-align: left;
-    color: white;
+    color: #434343;
     padding-left: 5px;
     font-weight: bold;
+  }
+
+  .error {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: #ee609c;
   }
   
   .input-block {
@@ -48,11 +56,11 @@
     height: 65px;
     width: 90px;
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
     color: white;
-    background-color: #C60C5F;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);;
   }

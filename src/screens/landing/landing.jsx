@@ -1,32 +1,42 @@
 import './landing.css'
-import Input from '../../components/Input/Input'
-import { useHistory } from 'react-router'
+import Input from '../../components/Input/input'
 import { useState } from 'react';
-import Loading from '../../components/loading/loading';
+import Loading from '../../components/Loading/loading';
+import Dashboard from '../../components/Dashboard/dashboard';
+
 const Landing = (props) => {
 
-    let history = useHistory();
     
     const [isLoading, setLoading] = useState(false)
-
-    const { onClick } = props
+    const [isError, setError] = useState("")
+    const [finishedLoading, setFinished] = useState(false)
+    const { onClick, lookupSummoner } = props
 
     return (
         <div className='landing'>
-            <div className='loading-section'>
-                {isLoading && <Loading></Loading>}
-            </div>
-            <div className='headline-input'>
+            <div className={`headline-input ${finishedLoading && 'finished-loading'}`}>
                 <div className='headline-title'>
                 Last Five
                 </div>
-                <Input onClick={ async (summonerName) => {
+                <Input isError={(!isLoading && isError != "") && isError} onClick={ async (summonerName) => {
                     setLoading(true)
                     const response = await onClick(summonerName)
                     setLoading(false)
-                    history.push('/profile')
+                    if (response.error) {
+                        setError(response.error)
+                    }
+                    else {
+                        setError("")
+                        setFinished(true)
+                    }
                 }}></Input>
             </div>
+            {isLoading && <div className='loading-section'>
+                <Loading></Loading>
+            </div>}
+            {finishedLoading &&
+                <Dashboard {...props}></Dashboard>
+            }
       </div>
     )
 
