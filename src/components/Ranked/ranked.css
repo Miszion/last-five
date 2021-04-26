@@ -3,6 +3,11 @@
     animation: slideInRanked 2s ease-in-out forwards;
     animation-delay: 1s;
     opacity: 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }   
 
 .ranked img {

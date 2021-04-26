@@ -12,9 +12,15 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className='summoner-name'>
+                <div className='summoner-label'>
+                    SUMMONER NAME
+                </div>
                 {summonerName}
             </div>
             <div className='summoner-level'>
+            <div className='summoner-label'>
+                    SUMMONER LEVEL
+                </div>
                 {summonerInfo.summoner_level}
             </div>
         </div>
