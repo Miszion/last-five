@@ -1,8 +1,8 @@
 import './profile.css'
-
+import Game from '../Game/game'
 const Profile = (props) => {
     
-    const { summonerInfo, summonerName } = props
+    const { summonerInfo, summonerName, gameList } = props
 
     return (
         <div className='profile'>
@@ -22,6 +22,14 @@ const Profile = (props) => {
                     SUMMONER LEVEL
                 </div>
                 {summonerInfo.summoner_level}
+            </div>
+            <div className='summoner-games'>
+                <div className='games-label'>
+                    MATCHES
+                </div>
+                {gameList.map((game) => 
+                    <Game assists={game.assists} deaths={game.deaths} kills={game.kills} championImage={game.champion.image} champion={game.champion.name} result={game.result}></Game>
+                )}
             </div>
         </div>
     )

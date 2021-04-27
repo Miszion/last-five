@@ -64,12 +64,13 @@ export const lookupSummoner = async (summonerName) => {
 
     const summoner = {
         summonerName: summonerName,
-        summonerInfo: await responses[0],
-        summonerRank: await responses[1],
-        winRate: await responses[2].winrate,
-        averageDamage: await responses[2].average_damage,
-        averageDpm: await responses[2].average_dpm,
-        mostPlayed: await responses[3]
+        summonerInfo: responses[0],
+        summonerRank: responses[1],
+        winRate: responses[2].winrate,
+        averageDamage: responses[2].average_damage,
+        averageDpm: responses[2].average_dpm,
+        mostPlayed: responses[3],
+        gameList:   responses[2].game_list
     }
 
     return summoner
