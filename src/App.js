@@ -2,7 +2,7 @@
 import React from 'react'
 
 import './App.css';
-import { lookupSummoner } from '../src/helpers/riot'
+import { lookupSummoner } from '../src/helpers/Riot'
 import Landing from '../src/screens/landing/landing'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
