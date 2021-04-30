@@ -1,14 +1,17 @@
 var express = require('express');
-const app = require("https-localhost")("last-five.herokuapp.com")
-
+var app = express();
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('build'));
+	app.use((req, res, next) => {
+		if (req.header('x-forwarded-proto') !== 'https')
+		  res.redirect(`https://${req.header('host')}${req.url}`)
+		else
+		  next()
+	  })
 }
 
 app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(8080);
-
-app.redirect()
+app.listen(process.env.PORT || 8080);
