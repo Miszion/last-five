@@ -3,8 +3,9 @@
     position: absolute;
     width: 100%;
     top: 0%;
-    height: 100%;
+    height: fit-content;
     left: 0%;
+    background-color: #fafafa;
 }
 
 
@@ -17,4 +18,18 @@
     margin-left: 350px;
     margin-right: 50px;
     width: 100%;
+}
+
+
+@media screen and (max-width: 720px){
+    .statistics-section {
+        margin-top: 150px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .statistics-section > * {
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
 }

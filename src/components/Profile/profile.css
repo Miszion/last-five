@@ -12,7 +12,8 @@
     animation-delay: 1.5s;
     opacity: 0;
     background-color: white;
-    position: absolute;
+    position: fixed;
+    z-index: 9999;
 }
 
 .summoner-name {
@@ -68,5 +69,40 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
     }
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    .profile {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100px;
+        z-index: 9999;
+    }
+
+    .summoner-level {
+        margin-top: 0px;
+    }
+
+    .summoner-label {
+        font-size: 11px;
+    }
+    
+    .summoner-games {
+        display: none;
+    }
+
+    .profile-section {
+        top: 0%;
+        height: 100px;
+        width: 100%;
+    }
+    .summoner-icon img {
+        max-width: 75px;
+    }
+    .icon-border {
+        height: 90px;
+        width: 90px;
     }
 }
