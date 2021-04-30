@@ -15,12 +15,12 @@ const Dashboard = (props) => {
             <div className='profile-section'>
                 <Profile summonerInfo={lookupSummoner.summonerInfo} summonerName={lookupSummoner.summonerName} gameList={lookupSummoner.gameList}></Profile>
             </div>
-            <div className='statistics-section'>
-                <Ranked rank={lookupSummoner.summonerRank.rank} LP={lookupSummoner.summonerRank.LP}></Ranked>
-                <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
-                <Winrate winRate={lookupSummoner.winRate}></Winrate>
-                <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
-            </div>
+                <div className='statistics-section'>
+                    <Ranked rank={lookupSummoner.summonerRank.rank} LP={lookupSummoner.summonerRank.LP}></Ranked>
+                    <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
+                    <Winrate winRate={lookupSummoner.winRate}></Winrate>
+                    <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
+                </div>
         </div>
     )
 
