@@ -1,7 +1,7 @@
 import './landing.css'
 import Input from '../../components/input/input.jsx'
 import React, { useState } from 'react';
-import Loading from '../../components/loading/loading.jsx';
+import Loading from '../../components/Loading/loading.jsx';
 import Dashboard from '../../components/dashboard/dashboard.jsx';
 
 const Landing = (props) => {
