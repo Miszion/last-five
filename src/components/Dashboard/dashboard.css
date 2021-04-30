@@ -5,8 +5,8 @@
     top: 0%;
     height: fit-content;
     left: 0%;
-    background-color: #fafafa;
 }
+
 
 
 .statistics-section {
@@ -21,6 +21,11 @@
 }
 
 
+.statistics-section > * {
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
 @media screen and (max-width: 720px){
     .statistics-section {
         margin-top: 150px;
@@ -28,8 +33,4 @@
         margin-left: 0px;
     }
 
-    .statistics-section > * {
-        margin-bottom: 35px;
-        margin-top: 35px;
-    }
 }

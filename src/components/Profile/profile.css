@@ -9,7 +9,7 @@
     border-right: 2px solid #eeeeee;
     height: 100%;
     animation: fadeIn 2s ease-out forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     opacity: 0;
     background-color: white;
     position: fixed;
