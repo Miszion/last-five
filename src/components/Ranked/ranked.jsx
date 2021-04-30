@@ -8,7 +8,7 @@ import Diamond from '../../assets/Emblem_Diamond.png'
 import Master from '../../assets/Emblem_Master.png'
 import GrandMaster from '../../assets/Emblem_Grandmaster.png'
 import Challenger from '../../assets/Emblem_Challenger.png'
-
+import Unranked from '../../assets/Emblem_Unranked.png'
 const getEmblem = (rank) => {
 
     const rankTier = rank.split(" ")[0]
@@ -32,6 +32,8 @@ const getEmblem = (rank) => {
             return <img src={GrandMaster} alt='Grandmaster'></img>
         case 'CHALLENGER':
             return <img src={Challenger} alt='Challenger'></img>
+        case 'UNRANKED':
+            return <img src={Unranked} alt='Unranked'></img>
     }
 
 }
@@ -49,7 +51,7 @@ const Ranked = (props) => {
             <div className='ranked-title'>
                 {rank}
                 <br></br>
-                {LP} LP
+                {LP && `${LP} LP`}
             </div>
         </div>
     )

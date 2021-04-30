@@ -1,5 +1,5 @@
 export const fetchMostPlayed = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/most_played', {
+    const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/most_played`, {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
@@ -12,7 +12,7 @@ export const fetchMostPlayed = async (summonerName) => {
   }
 
 export const fetchWinRate = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/match_info', {
+    const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/match_info`, {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
@@ -26,7 +26,7 @@ export const fetchWinRate = async (summonerName) => {
   }
   
 export const fetchSummonerInfo = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/summoner_info', {
+    const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/summoner_info`, {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
@@ -40,7 +40,7 @@ export const fetchSummonerInfo = async (summonerName) => {
   }
 
 export const fetchSummonerRank = async (summonerName) => {
-    const getRes = await fetch('http://127.0.0.1:8000/rank', {
+    const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/rank`, {
       body: JSON.stringify({
         'summonerName': summonerName
       }),
