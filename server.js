@@ -1,11 +1,7 @@
-var express = require('express');
-var app = express();
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('build'));
-}
+const app = require("https-localhost")()
 
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+app.serve('/build/index.html')
 
 app.listen(process.env.PORT || 8080);
+
+app.redirect()
