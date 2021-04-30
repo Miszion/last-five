@@ -1,5 +1,5 @@
 var express = require('express');
-var app = express();
+const app = require("https-localhost")("last-five.herokuapp.com")
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('build'));
@@ -10,3 +10,5 @@ app.get('*', (request, response) => {
 });
 
 app.listen(process.env.PORT || 8080);
+
+app.redirect()
