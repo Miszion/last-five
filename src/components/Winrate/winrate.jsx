@@ -1,4 +1,5 @@
 import './winrate.css'
+import React from 'react'
 import Fraction from 'fraction.js'
 
 const calculateFraction = (winrate) => {

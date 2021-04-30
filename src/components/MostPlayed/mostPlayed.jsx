@@ -1,4 +1,5 @@
 import './mostPlayed.css'
+import React from 'react'
 
 const MostPlayed = (props) => {
 

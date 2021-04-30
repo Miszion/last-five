@@ -1,4 +1,5 @@
 import './ranked.css'
+import React from 'react'
 import Bronze from '../../assets/Emblem_Bronze.png'
 import Iron from '../../assets/Emblem_Iron.png'
 import Silver from '../../assets/Emblem_Silver.png'

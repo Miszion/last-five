@@ -1,4 +1,5 @@
 import './dashboard.css'
+import React from 'react'
 import Ranked from '../Ranked/ranked.jsx'
 import Profile from '../Profile/profile.jsx'
 import MostPlayed from '../MostPlayed/mostPlayed.jsx'
