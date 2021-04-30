@@ -1,8 +1,8 @@
 import './landing.css'
-import Input from '../../components/Input/input.jsx'
+import Input from '../../components/input/input.jsx'
 import React, { useState } from 'react';
-import Loading from '../../components/Loading/loading.jsx';
-import Dashboard from '../../components/Dashboard/dashboard.jsx';
+import Loading from '../../components/loading/loading.jsx';
+import Dashboard from '../../components/dashboard/dashboard.jsx';
 
 const Landing = (props) => {
 

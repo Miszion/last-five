@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import '../Input/input.css'
+import './input.css'
 
 const Input = (props) => {
 

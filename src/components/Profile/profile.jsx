@@ -1,5 +1,5 @@
 import './profile.css'
-import Game from '../Game/game.jsx'
+import Game from '../game/game.jsx'
 import React from 'react'
 
 const Profile = (props) => {
