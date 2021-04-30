@@ -1,9 +1,9 @@
 import './dashboard.css'
-import Ranked from '../Ranked/ranked'
-import Profile from '../Profile/profile'
-import MostPlayed from '../MostPlayed/mostPlayed'
-import Winrate from '../Winrate/winrate'
-import AverageDamage from '../AverageDamage/averageDamage'
+import Ranked from '../Ranked/ranked.jsx'
+import Profile from '../Profile/profile.jsx'
+import MostPlayed from '../MostPlayed/mostPlayed.jsx'
+import Winrate from '../Winrate/winrate.jsx'
+import AverageDamage from '../AverageDamage/averageDamage.jsx'
 
 const Dashboard = (props) => {
 
