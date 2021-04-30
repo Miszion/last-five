@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import './averageDamage.css'
 const AverageDamage = (props) => {
 

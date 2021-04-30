@@ -1,6 +1,6 @@
 import './landing.css'
 import Input from '../../components/Input/input.jsx'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Loading from '../../components/Loading/loading.jsx';
 import Dashboard from '../../components/Dashboard/dashboard.jsx';
 

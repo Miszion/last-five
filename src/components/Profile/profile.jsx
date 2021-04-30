@@ -1,5 +1,7 @@
 import './profile.css'
 import Game from '../Game/game.jsx'
+import React from 'react'
+
 const Profile = (props) => {
     
     const { summonerInfo, summonerName, gameList } = props
