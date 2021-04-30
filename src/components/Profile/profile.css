@@ -1,0 +1,72 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section {
+    width: 300px;
+    border-right: 2px solid #eeeeee;
+    height: 100%;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+}
+
+.summoner-name {
+    font-weight: 800;
+    font-size: 24px;
+    color: #434343;
+}
+
+.games-label {
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #434343;
+}
+
+.summoner-level {
+    font-weight: 800;
+    font-size: 24px;
+    color: #434343;
+    margin-top: 25px;
+}
+
+.summoner-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.icon-border {
+    height: 160px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+.summoner-icon img {
+    max-width: 150px;
+    border-radius: 300px;
+    margin-top: 3px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

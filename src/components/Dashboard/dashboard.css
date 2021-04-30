@@ -1,0 +1,20 @@
+.dashboard {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    height: 100%;
+    left: 0%;
+}
+
+
+.statistics-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 350px;
+    margin-right: 50px;
+    width: 100%;
+}
