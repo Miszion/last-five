@@ -22,14 +22,6 @@
     color: #434343;
 }
 
-.games-label {
-    font-weight: 800;
-    font-size: 14px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    color: #434343;
-}
-
 .summoner-level {
     font-weight: 800;
     font-size: 24px;
@@ -83,16 +75,17 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
 
     .summoner-level {
         margin-top: 0px;
+        font-size: 18px
     }
 
     .summoner-label {
         font-size: 11px;
     }
-    
-    .summoner-games {
-        display: none;
-    }
 
+    .summoner-name {
+        font-size: 18px;
+    }
+    
     .profile-section {
         top: 0%;
         height: 100px;

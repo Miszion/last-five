@@ -5,10 +5,13 @@ import Profile from '../Profile/profile.jsx'
 import MostPlayed from '../MostPlayed/mostPlayed.jsx'
 import Winrate from '../Winrate/winrate.jsx'
 import AverageDamage from '../AverageDamage/averageDamage.jsx'
+import GameList from '../GameList/gameList'
 
 const Dashboard = (props) => {
 
     const { lookupSummoner } = props
+
+    const { gameList } = lookupSummoner
 
     return (
         <div className='dashboard'>
@@ -20,6 +23,7 @@ const Dashboard = (props) => {
                     <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
                     <Winrate winRate={lookupSummoner.winRate}></Winrate>
                     <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
+                    <GameList className="mobile" label="Last Five Matches" gameList={gameList}></GameList>
                 </div>
         </div>
     )

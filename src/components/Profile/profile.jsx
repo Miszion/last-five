@@ -1,5 +1,5 @@
 import './profile.css'
-import Game from '../Game/game.jsx'
+import GameList from '../GameList/gameList'
 import React from 'react'
 
 const Profile = (props) => {
@@ -25,14 +25,7 @@ const Profile = (props) => {
                 </div>
                 {summonerInfo.summoner_level}
             </div>
-            <div className='summoner-games'>
-                <div className='games-label'>
-                    MATCHES
-                </div>
-                {gameList.map((game) => 
-                    <Game assists={game.assists} deaths={game.deaths} kills={game.kills} championImage={game.champion.image} champion={game.champion.name} result={game.result}></Game>
-                )}
-            </div>
+            <GameList label="MATCHES" gameList={gameList}></GameList>
         </div>
     )
 
