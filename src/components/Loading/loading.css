@@ -10,7 +10,7 @@
     background: #434343;
     background: #fafafa;
     position: relative;
-    animation: load3 .5s infinite linear;
+    animation: load3 .7s infinite linear;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);

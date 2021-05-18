@@ -5,7 +5,7 @@ import Profile from '../Profile/profile.jsx'
 import MostPlayed from '../MostPlayed/mostPlayed.jsx'
 import Winrate from '../Winrate/winrate.jsx'
 import AverageDamage from '../AverageDamage/averageDamage.jsx'
-
+import Grid from '../Grid/grid'
 const Dashboard = (props) => {
 
     const { lookupSummoner } = props
@@ -20,6 +20,7 @@ const Dashboard = (props) => {
                     <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
                     <Winrate winRate={lookupSummoner.winRate}></Winrate>
                     <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
+                    <Grid damageOverGames={[50000, 30000, 20000, 10000, 60000]}></Grid>
                 </div>
         </div>
     )
