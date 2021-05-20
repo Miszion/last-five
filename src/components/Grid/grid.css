@@ -2,6 +2,26 @@
     display: flex;
     flex-direction: row;
     width: 300px;
+    justify-content: center;
+    padding-bottom: 75px;
+}
+
+.grid-component {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideInGrid 1.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+
+.gold-earned-headline {
+    font-weight: 800;
+    color: #434343;
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
 .grid-y-axis {
@@ -48,12 +68,34 @@
 .grid {
     display: grid;
     border: 1px solid #eaeaea;
+    border-radius: 3px;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
     width: 275px;
     height: 275px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.x-axis-label {
+    font-weight: 800;
+    color: #434343;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 .grid-line {
     border: 1px solid #eaeaea;
+    border-radius: 3px;
     padding: 10px;
+    transition: background-color 1.5s ease-out;
+}
+@keyframes slideInGrid{
+    from {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
