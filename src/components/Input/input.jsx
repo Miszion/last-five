@@ -15,8 +15,13 @@ const Input = (props) => {
                     Summoner Name
                 </div>
                 <div className='input-block'>
-                    <input type="text" onChange={(e) => {
+                    <input type="text" autoCorrect={false} onChange={async (e) => {
                         setName(e.target.value)
+                    }}
+                    onKeyUp={async(e) => {
+                        if (e.key === 'Enter') {
+                            await onClick(summonerName)
+                        }
                     }}></input>
                     <button className='search' onClick={async () => {await onClick(summonerName)}}>Search</button>
                 </div>

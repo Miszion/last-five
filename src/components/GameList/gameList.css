@@ -1,0 +1,32 @@
+.summoner-games.mobile {
+    display: none;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.games-label {
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #434343;
+}
+
+.games-label.mobile {
+    font-weight: 800;
+    color: #434343;
+    font-size: 24px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 720px){ 
+
+    .summoner-games.mobile {
+        display: unset;
+    }
+    .summoner-games {
+        display: none;
+    }
+
+}

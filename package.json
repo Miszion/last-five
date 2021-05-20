@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "fraction.js": "^4.0.13",
+    "https-localhost": "^4.6.4",
     "multiple.js": "0.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

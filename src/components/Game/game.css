@@ -1,4 +1,3 @@
-
 .game-container {
     height: 50px;
     padding-top: 5px;
@@ -11,6 +10,8 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
 }
 
 .game-info {
@@ -36,6 +37,5 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
 
 .game-champion img {
     height: 50px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    border-radius: 300px;
 }
