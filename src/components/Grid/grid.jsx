@@ -115,10 +115,10 @@ const Grid = (props) => {
                     }
                 )}
             </div>
+            </div>
+            </div>
             <div className='x-axis-label'>
                 Games
-            </div>
-            </div>
             </div>
         </div>
     )
