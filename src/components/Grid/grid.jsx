@@ -78,7 +78,6 @@ const Grid = (props) => {
     }, [grid, gameNumber, isLoading])
 
     if (gameNumber === -1) {
-        console.log(gameNumber)
         setGameNumber(0)
     }
 
