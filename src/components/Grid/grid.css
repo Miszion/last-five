@@ -1,0 +1,103 @@
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: center;
+}
+
+.grid-component {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideInGrid 1.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+    padding-bottom: 50px;
+}
+
+.gold-earned-headline {
+    font-weight: 800;
+    color: #434343;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.grid-y-axis {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 253px;
+    justify-content: space-evenly;
+    margin-right: 10px;
+    position: absolute;
+    left: -10px;
+}
+
+.y-axis-item {
+    display: flex;
+    height: 23px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #434343;
+    font-weight: 700;
+}
+
+.grid-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.x-axis-item {
+    display: flex;
+    width: 23px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+    font-weight: 700;
+}
+
+.grid-x-axis {
+    display: flex;
+    flex-direction: row;
+    width: 253px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    width: 253px;
+    height: 253px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.x-axis-label {
+    font-weight: 800;
+    color: #434343;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.grid-line {
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    padding: 10px;
+    transition: background-color 1.5s ease-out;
+}
+@keyframes slideInGrid{
+    from {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

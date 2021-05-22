@@ -15,7 +15,8 @@ const Input = (props) => {
                     Summoner Name
                 </div>
                 <div className='input-block'>
-                    <input type="text" autoCorrect={false} onChange={async (e) => {
+                    <input type="text" autoCorrect="false"
+                    onChange={async (e) => {
                         setName(e.target.value)
                     }}
                     onKeyUp={async(e) => {
