@@ -90,7 +90,7 @@ const Grid = (props) => {
             <div className='grid-container'>
             <div className='grid-y-axis'>
                 {axisArray.map((i) => 
-                    <div className='y-axis-item'>
+                    <div className='y-axis-item' key={i}>
                         {i}k
                     </div>
                 )}
@@ -99,7 +99,7 @@ const Grid = (props) => {
             <div className='grid'>
                 {grid && grid.map((_, sub) =>
                     _.map((element, i) => 
-                    <div className='grid-line' style={{backgroundColor: element === 0 ? 'white' : '#B567D9', transitionDelay: `${2+(i/(sub+10))}s`}}/>
+                    <div className='grid-line' key={(i+1) * (sub + 1)} style={{backgroundColor: element === 0 ? 'white' : '#B567D9', transitionDelay: `${2+(i/(sub+10))}s`}}/>
                     ) 
                 )}
             </div>
@@ -108,7 +108,7 @@ const Grid = (props) => {
                     {
 
                         return (
-                            <div className='x-axis-item'>
+                            <div className='x-axis-item' key={i}>
                             {(i+1) % 2 == 0 && (i+1) / 2}
                             </div>
                         )

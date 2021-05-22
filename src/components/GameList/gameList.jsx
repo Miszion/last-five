@@ -9,8 +9,8 @@ const GameList = (props) => {
             <div className={`games-label ${className ? className : ''}`}>
                 {label}
             </div>
-            {gameList.map((game) => 
-                <Game assists={game.assists} deaths={game.deaths} kills={game.kills} championImage={game.champion.image} champion={game.champion.name} result={game.result}></Game>
+            {gameList.map((game, i) => 
+                <Game key={i} assists={game.assists} deaths={game.deaths} kills={game.kills} championImage={game.champion.image} champion={game.champion.name} result={game.result}></Game>
             )}
         </div>
     )

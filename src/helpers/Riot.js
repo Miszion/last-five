@@ -56,7 +56,6 @@ export const fetchSummonerRank = async (summonerName) => {
 
 export const lookupSummoner = async (summonerName) => {
 
-
   try {
 
     const responses = await Promise.all([await fetchSummonerInfo(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
@@ -70,7 +69,8 @@ export const lookupSummoner = async (summonerName) => {
         averageDamage: responses[2].average_damage,
         averageDpm: responses[2].average_dpm,
         mostPlayed: responses[3],
-        gameList:   responses[2].game_list
+        gameList:   responses[2].game_list,
+        goldList: responses[2].gold_list
     }
 
     return summoner

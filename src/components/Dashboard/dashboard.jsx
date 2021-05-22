@@ -24,7 +24,7 @@ const Dashboard = (props) => {
                     <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
                     <Winrate winRate={lookupSummoner.winRate}></Winrate>
                     <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
-                    <Grid goldOverGames={[50000, 30000, 20000, 10000, 60000]}></Grid>
+                    <Grid goldOverGames={lookupSummoner.goldList}></Grid>
                     <GameList className="mobile" label="Last Five Matches" gameList={gameList}></GameList>
                 </div>
         </div>
