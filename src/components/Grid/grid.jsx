@@ -13,13 +13,6 @@ const findGreatest = (goldOverGames) => {
     return maximum
 }
 
-
-const populateGame = (grid, setGrid, number, goldArray, axisArray) => {
-
-
-}
-
-
 const Grid = (props) => {
 
     const { goldOverGames } = props
