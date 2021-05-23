@@ -91,7 +91,7 @@ const Grid = (props) => {
             <div className='grid'>
                 {grid && grid.map((_, sub) =>
                     _.map((element, i) => 
-                    <div className='grid-line' key={(i+1) * (sub + 1)} style={{backgroundColor: element === 0 ? 'white' : '#B567D9', transitionDelay: `${2+(i/(sub+10))}s`}}/>
+                    <div className='grid-line' key={(i+1) * (sub + 1)} style={{backgroundColor: element === 0 ? 'white' : '#B567D9', transitionDelay: `${2.5+(i/(sub+10))}s`}}/>
                     ) 
                 )}
             </div>
