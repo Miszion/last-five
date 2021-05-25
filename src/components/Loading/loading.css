@@ -44,7 +44,17 @@
 
 }
 
-.active {
+.active-1 {
+  background-color: #b465da;
+  transform: translateY(-3px)
+}
+
+.active-2 {
+  background-color: #b465da;
+  transform: translateY(-3px)
+}
+
+.active-3 {
   background-color: #b465da;
   transform: translateY(-3px)
 }

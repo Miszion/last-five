@@ -25,9 +25,9 @@ const Loading = (props) => {
                 Loading Summoner
             </div>
             <div className='circle-grid'>
-                <div className={`loading-circle ${selected === 0 && 'active'}`}/>
-                <div className={`loading-circle ${selected === 1 && 'active'}`}/>
-                <div className={`loading-circle ${selected === 2 && 'active'}`}/>
+                <div className={`loading-circle ${selected === 0 && 'active-1'}`}/>
+                <div className={`loading-circle ${selected === 1 && 'active-2'}`}/>
+                <div className={`loading-circle ${selected === 2 && 'active-3'}`}/>
             </div>
         </div>
     )
