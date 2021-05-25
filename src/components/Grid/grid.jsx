@@ -28,7 +28,7 @@ const Grid = (props) => {
         let populatedArray = []
 
         for (let i = 0; i < 11; i++) {
-            populatedArray[i] = Math.floor((i+1) * Number(greatest / 11)/ 1000)
+            populatedArray[i] = ((i+1) * Number(greatest / 11)/ 1000).toFixed(1)
         }
         
         setAxisArray(populatedArray)
