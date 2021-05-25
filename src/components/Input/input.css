@@ -62,5 +62,12 @@
     font-weight: bold;
     font-size: 18px;
     color: white;
+    box-shadow: none;
+    transition: box-shadow .3s ease-out;
     background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);;
+  }
+
+  .search:hover { 
+    --tw-shadow: 0 25px 50px -12px #b465da;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #b465da), var(--tw-ring-shadow, 0 0 #b465da), var(--tw-shadow);
   }
