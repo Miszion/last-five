@@ -1,16 +1,3 @@
-export const fetchMostPlayed = async (summonerName) => {
-    const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/most_played`, {
-      body: JSON.stringify({
-        'summonerName': summonerName
-      }),
-      method: 'POST'
-    })
-  
-    const text = await getRes.json()
-  
-    return text
-  }
-
 export const fetchWinRate = async (summonerName) => {
     const getRes = await fetch(`${process.env.REACT_APP_LAST_FIVE_BACKEND}/match_info`, {
       body: JSON.stringify({
@@ -58,7 +45,7 @@ export const lookupSummoner = async (summonerName) => {
 
   try {
 
-    const responses = await Promise.all([await fetchSummonerInfo(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName), await fetchMostPlayed(summonerName)])
+    const responses = await Promise.all([await fetchSummonerInfo(summonerName), await fetchSummonerRank(summonerName), await fetchWinRate(summonerName)])
 
 
     const summoner = {
@@ -66,9 +53,9 @@ export const lookupSummoner = async (summonerName) => {
         summonerInfo: responses[0],
         summonerRank: responses[1],
         winRate: responses[2].winrate,
-        averageDamage: responses[2].average_damage,
+        damageTotal: responses[2].damage_total,
         averageDpm: responses[2].average_dpm,
-        mostPlayed: responses[3],
+        mostPlayed: responses[2].most_played,
         gameList:   responses[2].game_list,
         goldList: responses[2].gold_list
     }

@@ -4,7 +4,7 @@ import Ranked from '../Ranked/ranked.jsx'
 import Profile from '../Profile/profile.jsx'
 import MostPlayed from '../MostPlayed/mostPlayed.jsx'
 import Winrate from '../Winrate/winrate.jsx'
-import AverageDamage from '../AverageDamage/averageDamage.jsx'
+import Damage from '../Damage/damage.jsx'
 import Grid from '../Grid/grid'
 import GameList from '../GameList/gameList'
 
@@ -23,7 +23,7 @@ const Dashboard = (props) => {
                     <Ranked rank={lookupSummoner.summonerRank.rank} LP={lookupSummoner.summonerRank.LP}></Ranked>
                     <MostPlayed mostPlayed={lookupSummoner.mostPlayed}></MostPlayed>
                     <Winrate winRate={lookupSummoner.winRate}></Winrate>
-                    <AverageDamage averageDamage={lookupSummoner.averageDamage} averageDpm={lookupSummoner.averageDpm}></AverageDamage>
+                    <Damage damageTotal={lookupSummoner.damageTotal} averageDpm={lookupSummoner.averageDpm}></Damage>
                     <Grid goldOverGames={lookupSummoner.goldList}></Grid>
                     <GameList className="mobile" label="Last Five Matches" gameList={gameList}></GameList>
                 </div>

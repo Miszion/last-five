@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import './averageDamage.css'
-const AverageDamage = (props) => {
+import './damage.css'
+const Damage = (props) => {
 
     const [widthLoaded, setWidth] = useState(false)
 
@@ -21,9 +21,9 @@ const AverageDamage = (props) => {
             </div>
             <div className='average-damage-desc' style={{opacity: widthLoaded ? '1' : '0', transform: widthLoaded ? `translateY('0')` : `translateY('50px')`}}>
                 <div className='average-damage-desc-title'>
-                    TOTAL
+                    TOTAL DAMAGE
                 </div>
-                {props.averageDamage.toFixed(0)}
+                {props.damageTotal.toFixed(0)}
                 <div className='average-damage-desc-title' style={{marginTop: '15px'}}>
                     AVG DAMAGE PER MINUTE
                 </div>
@@ -34,4 +34,4 @@ const AverageDamage = (props) => {
 
 }
 
-export default AverageDamage
+export default Damage
