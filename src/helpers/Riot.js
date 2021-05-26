@@ -49,7 +49,7 @@ export const lookupSummoner = async (summonerName) => {
 
 
     const summoner = {
-        summonerName: summonerName,
+        summonerName: responses[0].summoner_name,
         summonerInfo: responses[0],
         summonerRank: responses[1],
         winRate: responses[2].winrate,
