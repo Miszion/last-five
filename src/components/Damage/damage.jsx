@@ -23,7 +23,7 @@ const Damage = (props) => {
                 <div className='average-damage-desc-title'>
                     TOTAL DAMAGE
                 </div>
-                {props.damageTotal.toFixed(0)}
+                {props.damageTotal.toLocaleString()}
                 <div className='average-damage-desc-title' style={{marginTop: '15px'}}>
                     AVG DAMAGE PER MINUTE
                 </div>

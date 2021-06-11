@@ -4,13 +4,13 @@ import Fraction from 'fraction.js'
 
 const calculateFraction = (winrate) => {
     
-    const percentage = `.${winrate}`
+    const percentage = `${(winrate/100) * 5}`
 
     const fraction = new Fraction(percentage).toFraction(true)
 
     return ( 
         <div className='winrate-fraction'>
-            {fraction}
+            {fraction} / 5
         </div>
     )
 }
