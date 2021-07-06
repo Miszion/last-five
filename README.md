@@ -2,7 +2,7 @@
 
 ## Description
 
-Last 5 is a league of legends statistics tool used for calculating various game stats in a user's last five games.
+Last Five is a league of legends statistics tool used for calculating various game stats in a user's last five games.
 
 ### How To Use
 
