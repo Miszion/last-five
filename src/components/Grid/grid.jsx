@@ -13,6 +13,17 @@ const findGreatest = (goldOverGames) => {
     return maximum
 }
 
+const findLowest = (goldOverGames) => {
+
+    let minimum = Number.MAX_VALUE
+    for (var i in goldOverGames) {
+        if (goldOverGames[i] < minimum) {
+            minimum = goldOverGames[i]
+        }
+    }
+    return minimum
+}
+
 const Grid = (props) => {
 
     const { goldOverGames } = props
@@ -25,10 +36,11 @@ const Grid = (props) => {
     useEffect(() => {
 
         const greatest = findGreatest(goldOverGames)
+
         let populatedArray = []
 
         for (let i = 0; i < 11; i++) {
-            populatedArray[i] = ((i+1) * Number(greatest / 11)/ 1000).toFixed(1)
+            populatedArray[i] = ((i) * Number(greatest / 11)/ 1000).toFixed(1)
         }
         
         setAxisArray(populatedArray)
