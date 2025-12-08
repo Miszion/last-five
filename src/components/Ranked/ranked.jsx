@@ -1,15 +1,16 @@
 import './ranked.css'
 import React from 'react'
-import Bronze from '../../assets/Emblem_Bronze.png'
-import Iron from '../../assets/Emblem_Iron.png'
-import Silver from '../../assets/Emblem_Silver.png'
-import Gold from '../../assets/Emblem_Gold.png'
-import Platinum from '../../assets/Emblem_Platinum.png'
-import Diamond from '../../assets/Emblem_Diamond.png'
-import Master from '../../assets/Emblem_Master.png'
-import GrandMaster from '../../assets/Emblem_Grandmaster.png'
-import Challenger from '../../assets/Emblem_Challenger.png'
-import Unranked from '../../assets/Emblem_Unranked.png'
+import Bronze from '../../assets/ranked/Emblem_Bronze.webp'
+import Iron from '../../assets/ranked/Emblem_Iron.webp'
+import Silver from '../../assets/ranked/Emblem_Silver.webp'
+import Gold from '../../assets/ranked/Emblem_Gold.webp'
+import Platinum from '../../assets/ranked/Emblem_Platinum.webp'
+import Diamond from '../../assets/ranked/Emblem_Diamond.webp'
+import Master from '../../assets/ranked/Emblem_Master.webp'
+import GrandMaster from '../../assets/ranked/Emblem_Grandmaster.webp'
+import Challenger from '../../assets/ranked/Emblem_Challenger.webp'
+import Unranked from '../../assets/ranked/Emblem_Unranked.webp'
+import Emerald from '../../assets/ranked/Emblem_Emerald.webp'
 const getEmblem = (rank) => {
 
     const rankTier = rank.split(" ")[0]
@@ -33,6 +34,8 @@ const getEmblem = (rank) => {
             return <img src={GrandMaster} alt='Grandmaster'></img>
         case 'CHALLENGER':
             return <img src={Challenger} alt='Challenger'></img>
+        case 'EMERALD':
+            return <img src={Emerald} alt='Emerald'></img>
         case 'UNRANKED':
             return <img src={Unranked} alt='Unranked'></img>
     }
